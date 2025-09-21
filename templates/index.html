@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur d'Assurance Auto IFPIA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Section d'en-tête -->
+    <header>
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo IFPIA" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Découvrez nos offres</a></li>
+                    <li><a href='{{ url_for('simulateur') }}'>Accédez au simulateur</a></li>
+                    <li><a href="#">Déclarez votre sinistre</a></li>
+                    <li><a href="#">Nous connaître</a></li>
+                    <li><a href="#">Mon Espace</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Affichage des erreurs (si existantes) -->
+    {% if error %}
+    <div class="error-message">
+        <p>{{ error }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Section des Photos avec Carrousel -->
+    <section class="photo-section">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="{{ url_for('static', filename='img/photo1.jpg') }}" alt="Photo 1" class="photo">
+                <img src="{{ url_for('static', filename='img/photo2.jpg') }}" alt="Photo 2" class="photo">
+                <!-- duplication pour effet infini -->
+                <img src="{{ url_for('static', filename='img/photo1.jpg') }}" alt="Photo 1" class="photo">
+                <img src="{{ url_for('static', filename='img/photo2.jpg') }}" alt="Photo 2" class="photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Bienvenue sur le Simulateur d'Assurance Auto IFPIA</h1>
+            <p>Obtenez votre devis personnalisé en quelques clics grâce à notre simulateur d'assurance auto.</p>
+            <button onclick="window.location.href='{{ url_for('simulateur') }}'">Obtenez un tarif Auto</button>
+        </div>
+    </section>
+
+    <!-- Section des Formules de Protection -->
+    <section class="plans">
+        <h2>Nos Équipes et Moments en Action</h2>
+        <h2>Les formules adaptées à votre profil et à vos besoins</h2>
+        <div class="plan-cards">
+            <div class="plan-card">
+                <h3>La Protection Essentielle</h3>
+                <p>Responsabilité civile obligatoire, protection contre les dommages matériels et corporels.</p>
+            </div>
+            <div class="plan-card">
+                <h3>Une Protection Élargie</h3>
+                <p>Couvre les vols, incendies, bris de glace, et bien plus encore.</p>
+            </div>
+            <div class="plan-card">
+                <h3>La Protection Maximale</h3>
+                <p>Protection complète incluant l’assistance 24h/7j et les dommages à votre véhicule.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 IFPIA Maroc. Tous droits réservés.</p>
+            <ul>
+                <li><a href="#">Conditions générales d'utilisation</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Mentions légales</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

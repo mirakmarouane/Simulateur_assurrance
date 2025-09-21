@@ -1,0 +1,426 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.navbar img {
+    width: 125px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff6347; /* Couleur au survol */
+    text-decoration: underline; /* Ajouter une sous-ligne pour l'effet */
+}
+
+
+.hero {
+    background: url('') no-repeat center center;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.hero h1 {
+    font-size: 1.85rem;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 1.60rem;
+    margin-bottom: 40px;
+}
+
+.hero button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #e53e3e;
+}
+
+/* -------- FORMULAIRE -------- */
+.form-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 80%;
+    max-width: 900px; /* Limite la largeur du formulaire */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style pour l'ensemble de la question */
+.question-title {
+    display: inline-block;
+    margin-right: 20px; /* Espacement entre la question et les options */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Espacement sous le dernier champ pour les conditions générales */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px; /* Espacement interne */
+    font-size: 1rem;
+    border: 1px solid #ccc;  /* Bordure légère */
+    border-radius: 4px;  /* Coins arrondis */
+    box-sizing: border-box;  /* Inclut padding et bordure dans la largeur */
+}
+
+/* Optionnel : Pour une meilleure expérience utilisateur, un léger focus sur les champs */
+.form-group input:focus {
+    border-color: #003366; /* Bordure bleu foncé lors du focus */
+    outline: none;  /* Supprime l'outline par défaut */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Groupe de radio et alignement des éléments */
+.radio-group label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-bottom: 15px; /* Ajouter plus d'espace entre chaque label */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Augmenter l'espace entre les éléments radio */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Augmenter l'espace entre chaque bouton radio */
+}
+
+/* Style pour les labels radio */
+.radio-label {
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.radio-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #003366;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Champs de formulaire */
+input[type="text"], input[type="number"], input[type="date"], select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.radio-label {
+    display: flex; /* Flexbox pour aligner correctement les éléments */
+    align-items: center; /* Aligner verticalement le texte et le bouton radio */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.btn-submit {
+    width: 50%;                      /* Largeur du bouton */
+    padding: 15px;                   /* Padding pour rendre le bouton plus grand */
+    font-size: 1.2rem;               /* Taille de la police */
+    background-color: #003366;       /* Couleur de fond */
+    color: white;                    /* Couleur du texte */
+    border: none;                    /* Pas de bordure */
+    cursor: pointer;                 /* Curseur pointer au survol */
+    border-radius: 5px;              /* Bordure arrondie */
+    transition: background-color 0.3s ease;  /* Transition douce sur le changement de couleur */
+    margin: 20px auto;               /* Marge en haut et centrage horizontal */
+    display: block;                  /* Faire du bouton un élément de type bloc pour centrer */
+}
+
+/* Effet de survol pour le bouton */
+button.btn-submit:hover {
+    background-color: #ff6347;      /* Couleur de fond au survol */
+}
+
+.plans {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.plans h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.plan-card {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.plan-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #f4f7fb;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: #003366;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ff6347;
+}
+
+/* -------- FORMULAIRE : Ajouter de l'espace entre la question et les options -------- */
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px; /* Ajouter de l'espace sous la question */
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Section photo */
+.photo-section {
+    text-align: center;
+    margin-top: 40px; /* Espace sous le bouton */
+}
+
+.photo-section h2 {
+    margin-top: 20px; /* Espacement entre les images et le titre */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Ajuste la couleur si nécessaire */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Pour un effet de profondeur sur les images */
+}
+
+/* Carrousel et animation */
+.carousel-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden; /* Masque les images qui sortent du cadre */
+}
+
+.carousel {
+    display: flex;
+    animation: slide 30s infinite linear; /* Défilement circulaire continu */
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Limite la hauteur des images pour qu'elles ne sortent pas de la page */
+    object-fit: cover;
+}
+
+/* Animation du défilement circulaire */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .plan-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Réduit la taille de la police pour les petits écrans */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+/* Zone de résultat sophistiquée, masquée par défaut */
+.result-container {
+    display: none; /* Masquer la zone au début */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Fond clair */
+    border-radius: 8px; /* Bordures arrondies */
+    border: 1px solid #ccc; /* Bordure grise */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Centrer le texte horizontalement */
+}
+/* Style pour les messages affichés */
+.result-container div {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style pour le message de succès */
+.result-container .success {
+    color: green;
+}
+
+/* Style pour le message d'erreur */
+.result-container .error {
+    color: red;
+}
+
+/* Style pour le message de chargement */
+.result-container .loading {
+    color: blue;
+}
