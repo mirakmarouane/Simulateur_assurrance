@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur d'Assurance Auto IFPIA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- En-tête du site -->
+    <header>
+        <div class="navbar">
+            <a href="{{ url_for('index') }}"> <!-- Lien vers la page d'accueil -->
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo IFPIA" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Découvrez nos offres</a></li>
+                    <li><a href="{{ url_for('simulateur') }}">Accédez au simulateur</a></li>
+                    <li><a href="#">Déclarez un sinistre</a></li>
+                    <li><a href="#">Qui sommes-nous ?</a></li>
+                    <li><a href="#">Mon Espace</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Simulateur d'Assurance Auto</h1>
+            <p>Estimez votre prime d'assurance en quelques clics.</p>
+        </div>
+    </section>
+
+    <!-- Formulaire de simulation -->
+    <section class="form-section">
+        <div class="form-container">
+            <form id="simulateur-form" method="POST" action="{{ url_for('simulateur') }}">
+                <h2>Formulaire de Simulation</h2>
+
+                <!-- Sélection du type de motorisation -->
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Quel type de motorisation pour votre véhicule ?</legend>
+                        <div class="radio-group">
+                            <label for="diesel"><input type="radio" id="diesel" name="motorisation" value="diesel" required> Diesel</label>
+                            <label for="essence"><input type="radio" id="essence" name="motorisation" value="essence" required> Essence</label>
+                            <label for="electrique"><input type="radio" id="electrique" name="motorisation" value="electrique" required> Electrique</label>
+                            <label for="hybride_e"><input type="radio" id="hybride_e" name="motorisation" value="hybride_e" required> Hybride E</label>
+                            <label for="hybride_d"><input type="radio" id="hybride_d" name="motorisation" value="hybride_d" required> Hybride D</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Champs Nom, Prénom, Email -->
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="nom" id="nom" placeholder="Votre nom complet" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Votre prénom complet" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" name="email" id="email" placeholder="Votre email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Âge :</label>
+                    <input type="number" name="age" id="age" placeholder="Votre âge" required>
+                </div>
+
+                <!-- Ancienneté du permis de conduire -->
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Depuis combien de temps avez-vous obtenu votre permis de conduire ?</legend>
+                        <div class="radio-group">
+                            <label for="moins_5"><input type="radio" id="moins_5" name="anciennete_permis" value="moins_5" required> Moins de 5 ans</label>
+                            <label for="5_20"><input type="radio" id="5_20" name="anciennete_permis" value="5_20" required> De 5 à 20 ans</label>
+                            <label for="plus_20"><input type="radio" id="plus_20" name="anciennete_permis" value="plus_20" required> Plus de 20 ans</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <label for="puissance">Puissance (en chevaux) :</label>
+                    <input type="number" name="puissance" id="puissance" placeholder="Indiquez la puissance en chevaux" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="usage_type">Type d'usage :</label>
+                    <select name="usage_type" id="usage_type" required>
+                        <option value="personal">Personnel</option>
+                        <option value="professional">Professionnel</option>
+                        <option value="mixed">Mixte</option>
+                    </select>
+                </div>
+
+                <!-- Acceptation des conditions -->
+                <div class="form-group">
+                    <label for="accept_terms">
+                        <input type="checkbox" id="accept_terms" name="accept_terms" required>
+                        J'accepte les <a href="#">conditions générales d'utilisation</a>.
+                    </label>
+                </div>
+
+
+                <!-- Bouton de soumission -->
+                <button type="submit" class="btn-submit">Calculer la prime</button>
+                <!-- Affichage des résultats ou des erreurs -->
+                 <div id="result"class="result-container"></div> <!-- Resultat du calcul ou erreur -->
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 IFPIA Maroc. Tous droits réservés.</p>
+            <ul>
+                <li><a href="#">Conditions générales d'utilisation</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Mentions légales</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

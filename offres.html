@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Offres - Simulateur Assurance Auto IFPIA</title>
+    <link rel="stylesheet" href="static/css/style.css">  <!-- Lien vers ton CSS -->
+</head>
+<body>
+    <!-- En-tête avec logo et navigation -->
+    <header>
+        <div class="navbar">
+            <a href="{{ url_for('index') }}"> <!-- Lien vers la page d'accueil -->
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo IFPIA" class="logo">
+            </a>
+            <nav>
+                <ul> 
+                    <li><a href='{{ url_for('offres') }}'>Découvrez nos offres</a></li>
+                    <li><a href='{{ url_for('simulateur') }}'>Accédez au simulateur</a></li>
+                    <li><a href="#">Déclarez votre sinistre</a></li>
+                    <li><a href="#">Nous connaître</a></li>
+                    <li><a href="#">Mon Espace</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Contenu principal de la page -->
+    <section id="mes-offres">
+        <h1>Nos Offres d'Assurance Auto</h1>
+        <p>Découvrez les offres adaptées à votre profil et à vos besoins en matière d'assurance auto.</p>
+        
+        <!-- Exemple d'affichage d'offres -->
+        <div class="plan-cards">
+            <h2>Protection Essentielle</h2>
+            <p>Responsabilité civile obligatoire, protection contre les dommages matériels et corporels.</p>
+            <p><strong>Prix : 500 MAD / an</strong></p>
+            <button>Obtenir cette offre</button>
+        </div>
+
+        <div class="plan-cards">
+            <h2>Protection Élargie</h2>
+            <p>Couvre les vols, incendies, bris de glace et bien plus encore.</p>
+            <p><strong>Prix : 800 MAD / an</strong></p>
+            <button>Obtenir cette offre</button>
+        </div>
+
+        <div class="plan-cards">
+            <h2>Protection Maximale</h2>
+            <p>Protection complète incluant l'assistance 24h/7j et les dommages à votre véhicule.</p>
+            <p><strong>Prix : 1200 MAD / an</strong></p>
+            <button>Obtenir cette offre</button>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 IFPIA Maroc. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

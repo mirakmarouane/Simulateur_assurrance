@@ -15,8 +15,8 @@
         <div class="navbar">
             <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo IFPIA" class="logo">
             <nav>
-                <ul>
-                    <li><a href="#">Découvrez nos offres</a></li>
+                <ul> 
+                    <li><a href='{{ url_for('offres') }}'>Découvrez nos offres</a></li>
                     <li><a href='{{ url_for('simulateur') }}'>Accédez au simulateur</a></li>
                     <li><a href="#">Déclarez votre sinistre</a></li>
                     <li><a href="#">Nous connaître</a></li>
